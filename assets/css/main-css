@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
+}
+
+/*Old Standard TT', serif*/
+/* .logo-text{
+    position: relative;
+    justify-content: start;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    font-family: $old-standard-reg;
+    font-weight: $old-standard-bold;
+} */
+.section {
+  margin-left: 5em;
+}
+
+.section h1 {
+  font-family: "Old Standard TT", serif;
+  font-size: 2rem;
+  padding-top: 1em;
+}
+
+.section p {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.section button {
+  padding: 0.5em;
+}
+
+.picture {
+  text-align: center;
+}
+
+picture img {
+  max-width: 90%;
+}
+
+.footer {
+  position: relative;
+  padding-left: 5em;
+  padding-top: 20px;
+  width: 93%;
+}
+
+.footer h3 {
+  font-family: "Old Standard TT", serif;
+  font-style: 700;
+  font-size: 1.5rem;
+  padding-bottom: 0.5em;
+}
+
+footer input {
+  padding: 0.5em;
+}
+
+/*texto vertical */
+h4 {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  left: 0;
+  top: 5%;
+}
+
+h4:nth-child(1) {
+  margin-left: 100%;
+}
+
+.texto-vertical-1 {
+  writing-mode: vertical-lr;
+}
+
+.header__input:checked ~ .header__ul {
+  overflow: visible;
+}
+
+#menu {
+  display: none;
+}
+
+.collapsible label {
+  display: none;
+}
+
+/*metodo bem todo el -header nav*/
+/*Grilla CSS*/
+.header {
+  grid-area: header;
+  background-color: #4872e4;
+}
+
+.main {
+  grid-area: main;
+  background-color: #1ed287;
+}
+
+.picture {
+  grid-area: picture;
+  background-color: chocolate;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #646266;
+}
+
+.container {
+  max-width: 90%;
+  background-color: #c9e71d;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 100% 100% 100%;
+  grid-template-areas: "header header header header header header header header header header header header" "main main main main main main picture picture picture picture picture picture" "main main main main main main picture picture picture picture picture picture" "footer footer footer footer footer footer picture picture picture picture picture picture";
+}
+
+@media (max-width: 960px) {
+  .picture img {
+    max-width: 100%;
+  }
+
+  .container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 50% 100% 100%;
+    grid-template-areas: "header header header header" "picture picture picture picture" "main main main main" "footer footer footer footer";
+  }
+}
+@media (max-width: 576px) {
+  .picture img {
+    max-width: 100%;
+  }
+
+  .container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 70% 100% 100%;
+    grid-template-areas: "header header header header" "picture picture picture picture" "main main main main" "footer footer footer footer";
+  }
+
+  /*media query de la navegacion*/
+  /*metodo bem todo el -header nav*/
+  .header__logo-text {
+    font-size: 45px;
+  }
+}
+
+/*# sourceMappingURL=main-css.map */

@@ -1,0 +1,59 @@
+/*metodo bem todo el -header nav*/
+/*tamaño grande escritorio */
+.header{
+  position: absolute;
+  width: 90%;
+  
+}
+.nav__collapsible {
+  label {
+      display: none;
+  }
+}
+.nav__container {
+  min-height: 100%;
+  padding: 0.5em 3em;
+  overflow: visible;
+
+}
+.nav__ul {
+  display: flex;
+  justify-content: flex-end;
+
+}
+.nav__li{
+  list-style:none ;
+}
+
+
+#menu {
+  display: none;
+}
+.nav__logo-text {
+  position: absolute;
+  top: .5%;
+  background-color: #000;
+  color: #fff;
+  padding: 1em;
+  font-family: $old-standard-reg;
+  font-weight: $old-standard-bold;
+  font-size: 1.7em;
+}
+
+
+.nav__li {
+  a {
+      display: inline-block;
+    /* background-color: rgb(85, 146, 85); */
+      padding: 1em;
+      font-family: $Raleway;
+      font-size:1em;
+      font-weight: $Raleway-bold;
+      text-decoration: none;
+      color: rgb(22, 22, 22);
+      &:hover {
+          color: rgb(151, 39, 39);
+      }
+  }
+}
+

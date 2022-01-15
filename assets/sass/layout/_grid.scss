@@ -1,0 +1,160 @@
+/*Grilla CSS- definición de áreas*/
+.header{
+    grid-area:header;
+    /* background-color: rgb(72, 114, 228); */
+}
+
+.main{
+    grid-area:main;
+    /* background-color: rgb(30, 210, 135); */
+}
+.pict{
+    grid-area:pict;
+    /* background-color: rgb(131, 145, 13); */
+}
+
+.footer{
+    grid-area:footer;
+    background-color:$smoky-black;
+}
+
+/* Aquí se define la grilla para desktop por defecto */
+.container{
+  max-width: 90%;
+  /* background-color:rgb(201, 231, 29); */
+   margin-left:auto;
+   margin-right: auto;
+   display:grid;
+   gap:10px;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: 
+   100px
+   100%
+   100%
+   100%;
+ grid-template-areas:
+ "header header header header header header header header header header header header"
+ "main main main main main pict pict pict pict pict pict pict"
+ "main main main main main pict pict pict pict pict pict pict"
+ "footer footer footer footer footer pict pict pict pict pict pict pict"; 
+}
+
+
+/* Para tablet */
+@media (max-width: 960px){
+
+  .pict{
+    width: 100%;
+    height: 100%;
+    background-image: url('./../img/imagen1.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover; 
+  }
+
+    .pict img{
+    max-width: 100%; 
+}
+
+.container {
+
+    display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 
+      100px
+      400px
+      100%
+      100%;
+    grid-template-areas:
+          "header header header header" 
+          "pict pict pict pict"
+        "main main main main"
+        "footer footer footer footer";
+  }
+  
+  }
+
+
+/*tamaño menor a 576 - móviles */
+   @media (max-width: 576px){
+    .pict{
+      width: 100%;
+      height: 100%;
+      
+      background-image: url('./../img/imagen1.png');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; 
+    }
+    .pict img{
+        max-width: 100%; 
+    }
+
+    .container {
+
+    display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 
+      100px
+      400px
+      100%
+      100%;
+    grid-template-areas:
+          "header header header header" 
+        "pict pict pict pict"
+        "main main main main"
+        "footer footer footer footer";  
+      }
+
+  /*media query de la navegacion*/
+/*metodo bem todo el -header nav*/
+.nav__navigation-list {
+  position: absolute;
+  width: 100%;
+}
+
+.nav__collapsible {
+  position: absolute;
+  text-align: right;
+  right: 10%;
+  label {
+      display: block;
+      padding-top: 0.6em;
+      padding-bottom: 0.5em;
+      padding-left: 9em;
+      margin-left: 4rem;
+      font-size:2em;
+  }
+}
+
+
+input:checked~.nav__container {
+  max-height: 100%;
+}
+.nav__container {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav__ul {
+  list-style-type: none;
+  display: block;
+ 
+}
+
+.nav__li {
+  a {
+      
+      text-align: left;
+      text-decoration: none;
+      color: rgb(117, 113, 113);
+      &:hover {
+          color: rgb(151, 39, 39);
+      }
+  }
+}
+
+  } 

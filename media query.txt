@@ -1,0 +1,67 @@
+ 
+@media (max-width: 576px) {
+  .fa-bars {
+    background-color: brown;
+    overflow: visible;
+  }
+  .fas {
+    background-color: coral;
+    overflow: visible;
+  }
+
+  .header__ul {
+    display: none;
+    position: absolute;
+  }
+
+  .header__input:checked ~ .header__ul {
+    overflow: visible;
+  }
+
+  .header__input {
+    display: none;
+  }
+
+  .header__label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid $smoky-black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+  .header__label:hover {
+    background: $smoky-granite;
+  }
+
+  /* Estilo del boton cuando el menú está expandido*/
+  .header__input:checked ~ .header__label {
+    background: $blanco-isabel;
+  }
+
+  .header__ul {
+    margin-top: 0;
+    padding: 0;
+    width: 200px;
+  }
+
+  .header__li {
+    display: block;
+    background: $blanco-isabel;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid $smoky-black;
+  }
+
+  /*Estilo cuando el mouse pasa encima de cada link del menu*/
+  .header__li:hover {
+    filter: brightness(110%);
+  }
+}
